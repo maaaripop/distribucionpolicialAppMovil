@@ -26,22 +26,20 @@ public class TipodelitoInteractorImpl implements TipodelitoInteractor {
         this.service = service;
     }
     @Override
-    public void listTipodelito(TipodelitoPresenter tipodelitoPresenter, Context context ) {
+    public void listTipodelito(final TipodelitoPresenter tipodelitoPresenter, Context context ) {
        Call<ArrayList<Tipodelito>> request = service.callTipodelito();
         request.enqueue(new Callback<ArrayList<Tipodelito>>() {
             @Override
             public void onResponse(Call<ArrayList<Tipodelito>> call, Response<ArrayList<Tipodelito>> response) {
-                if (!response.isSuccessful()) {
-                    Log.e("Mariella", "Erro: " + response.code());
-                } else {
-                    ArrayList<Tipodelito> tipodelitos;
-                    tipodelitos = (ArrayList<Tipodelito>) response.body();
+                ArrayList<Tipodelito> list=(ArrayList<Tipodelito>) response.body();
+                if (response.isSuccessful()) {
+                    tipodelitoPresenter.OnTipoDelitosFound(list);
                 }
             }
 
             @Override
             public void onFailure(Call<ArrayList<Tipodelito>> call, Throwable t) {
-                Log.e("Mariella", "Erro: " + t.getMessage());
+                tipodelitoPresenter.OnTipoDelitosNotFound();
             }
         });
     }

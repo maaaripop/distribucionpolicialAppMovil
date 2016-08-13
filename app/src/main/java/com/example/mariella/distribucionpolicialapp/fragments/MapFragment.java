@@ -33,7 +33,7 @@ public class MapFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // inflat and return the layout
-        tipodelitoPresenter.getAllPayments(getContext());
+        //tipodelitoPresenter.getAllPayments(getContext());
         View v = inflater.inflate(R.layout.fragment_map, container,
                 false);
         mMapView = (MapView) v.findViewById(R.id.mapView);
@@ -71,7 +71,7 @@ public class MapFragment extends Fragment {
 
         //list tipo delitos
 
-        List<Tipodelito> listTipodelitos = tipodelitoService.listTipodelito();
+        //List<Tipodelito> listTipodelitos = tipodelitoService.listTipodelito();
         return v;
     }
 

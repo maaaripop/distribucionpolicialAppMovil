@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+    <LinearLayout
+        android:id="@+id/payments_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:text="Código:"/>
+            <TextView android:id="@+id/tipodelito_item_code"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="CODIGO"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:text="Nombre:"/>
+            <TextView android:id="@+id/tipodelito_item_name"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="NOMBRE"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -11,6 +11,6 @@ import retrofit2.http.GET;
  * Created by Mariella on 11/08/2016.
  */
 public interface ServiceEndPoints {
-    @GET("localhost:8080/distribucionPolicialApp/tipodelitos/all")
+    @GET("tipodelitos/all")
     Call<ArrayList<Tipodelito>> callTipodelito();
 }

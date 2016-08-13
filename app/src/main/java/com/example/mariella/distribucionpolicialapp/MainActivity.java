@@ -17,10 +17,16 @@ import android.view.MenuItem;
 import com.example.mariella.distribucionpolicialapp.fragments.ImportFragment;
 import com.example.mariella.distribucionpolicialapp.fragments.MainFragment;
 import com.example.mariella.distribucionpolicialapp.fragments.MapFragment;
+import com.example.mariella.distribucionpolicialapp.fragments.TipoDelitoFragment;
+import com.example.mariella.distribucionpolicialapp.services.ApiServiceAdapter;
+import com.example.mariella.distribucionpolicialapp.services.ServiceEndPoints;
+
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    public static final int FRAGMENT_TIPO_DELITO=0;
+    public static ServiceEndPoints service=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +52,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        /*Retrofit config*/
+        service=ApiServiceAdapter.getInstance().create(ServiceEndPoints.class);
+        /**/
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
 
@@ -61,6 +70,8 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -103,6 +114,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
 
+        } else if(id== R.id.nav_tipo_delitos){
+            fm.beginTransaction().replace(R.id.content_frame, new TipoDelitoFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

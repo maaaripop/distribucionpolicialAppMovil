@@ -21,23 +21,21 @@ public class ApiServiceAdapter {
 
     public static Retrofit getInstance(){
         if(API_ADAPTER==null){
-            Interceptor interceptor = new Interceptor() {
+            /*Interceptor interceptor = new Interceptor() {
                 @Override
                 public Response intercept(Chain chain) throws IOException {
                     Request newRequest = chain.request().newBuilder().build();
-                    Log.d("Token", Constants.TOKEN);
                     return chain.proceed(newRequest);
                 }
             };
 
 // Add the interceptor to OkHttpClient
             OkHttpClient client = new OkHttpClient();
-            client.interceptors().add(interceptor);
+            client.interceptors().add(interceptor);*/
 
             API_ADAPTER =new Retrofit.Builder()
                     .baseUrl(Constants.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .client(client)
                     .build();
         }
         return API_ADAPTER;
