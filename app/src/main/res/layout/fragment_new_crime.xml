@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_crime_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_app"
+                android:padding="10dp"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+            />
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_app"
+                android:padding="10dp"
+                android:text="mm/dd/yyy"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/turn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_app"
+                android:padding="10dp"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+            />
+
+            <EditText
+                android:id="@+id/txtNewUserPwdRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_app"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:text="Descripción"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+            />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_app"
+                android:text="Registrar Delito"
+                android:textAllCaps="false"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

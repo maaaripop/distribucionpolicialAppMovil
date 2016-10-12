@@ -2,7 +2,6 @@ package com.example.mariella.distribucionpolicialapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Created by USER on 12/08/2016.
  */
-public class TipoDelitoFragment  extends Fragment {
+public class TipoDelitoFragment extends BaseFragment {
     TipodelitoPresenter presenter=TipodelitoPresenter.getInstance(this);
     TipoDelitoAdapter tipoDelitoAdapter;
 

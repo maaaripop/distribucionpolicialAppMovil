@@ -1,13 +1,11 @@
 package com.example.mariella.distribucionpolicialapp.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mariella.distribucionpolicialapp.R;
-import com.example.mariella.distribucionpolicialapp.models.Tipodelito;
 import com.example.mariella.distribucionpolicialapp.presenter.TipodelitoPresenter;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -18,16 +16,13 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.List;
-
 /**
  * Created by Mariella on 09/08/2016.
  */
-public class MapFragment extends Fragment {
+public class MapFragment extends BaseFragment {
     MapView mMapView;
-    private GoogleMap googleMap;
-
     TipodelitoPresenter tipodelitoPresenter;
+    private GoogleMap googleMap;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

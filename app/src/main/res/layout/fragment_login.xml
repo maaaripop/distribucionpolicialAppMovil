@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abc_input_method_navigation_guard"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/app_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:text="Herramienta de Distribución Policial"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/txtUsr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_login"
+            android:hint="Usuario"
+            android:padding="10dp"
+            android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/txtPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_login"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+            android:textStyle="italic" />
+        />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_login"
+            android:text="Iniciar Sesión"
+            android:textAllCaps="false"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="¿No tienes cuenta? Créate una!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,6 +1,5 @@
 package com.example.mariella.distribucionpolicialapp.fragments;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,7 +11,7 @@ import com.example.mariella.distribucionpolicialapp.R;
 /**
  * Created by Mariella on 09/08/2016.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends BaseFragment {
 
     @Nullable
     @Override

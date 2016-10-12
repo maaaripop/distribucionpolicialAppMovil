@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_app"
+                android:padding="10dp"
+                android:text="Correo"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/txtNewUserPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_app"
+                android:padding="10dp"
+                android:text="Contraseña"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+            />
+
+            <EditText
+                android:id="@+id/txtNewUserPwdRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_app"
+                android:padding="10dp"
+                android:text="Repetir Contraseña"
+                android:textColor="@color/common_plus_signin_btn_text_dark_disabled"
+                android:textStyle="italic" />
+            />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_app"
+                android:text="Crear cuenta"
+                android:textAllCaps="false"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>
